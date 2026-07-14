@@ -478,64 +478,435 @@ window.ORIATEK_SERVICES = [
       "Transformation planning"
     ]
   },
-
   {
-    slug: "staff-augmentation",
-    page: "staff-augmentation.html",
-    name: "Staff Augmentation",
-    fullName: "Staff Augmentation",
-    number: "09",
-    icon: "fa-solid fa-user-group",
+    slug:"java-development",
+
+    page:"java-development.html",
+
+    number:"10",
+
+    icon:"fa-brands fa-java",
+
+    name:"Java Development",
+
+    fullName:"Enterprise Java Development Services",
+
+    image:"assets/services/java-development.jpg",
 
     shortDescription:
-      "Extend delivery capacity with experienced engineers, architects, consultants and specialists who integrate quickly with your teams.",
+    "Build secure, scalable and high-performance Java applications for enterprise businesses.",
 
     overview:
-      "Oriatek provides flexible access to skilled professionals for short-term projects, strategic programs and long-term product delivery. Our specialists work within your delivery model and collaborate closely with internal teams.",
+    "Oriatek delivers enterprise Java development solutions using Core Java, Advanced Java, Spring Framework and Spring Boot for modern business applications.",
 
     secondaryText:
-      "We support individual specialist placements, dedicated teams and managed delivery pods across software engineering, cloud, cyber security, data, quality and product delivery.",
+    "We develop ERP systems, CRM applications, business portals, REST APIs and cloud-ready enterprise software using Java.",
 
-    image:
-      "assets/services/staff-augmentation.jpg",
-
-    capabilities: [
+    capabilities:[
       {
-        title: "Dedicated Specialists",
-        text:
-          "Add focused expertise in engineering, cloud, data, security, quality and product delivery."
+        title:"Core Java Development",
+        text:"Object-oriented Java application development."
       },
       {
-        title: "Team Extension",
-        text:
-          "Integrate experienced professionals into existing squads while preserving your delivery practices."
+        title:"Spring Boot",
+        text:"Enterprise REST API and backend development."
       },
       {
-        title: "Managed Delivery Pods",
-        text:
-          "Use cross-functional teams with defined outcomes, governance and delivery responsibility."
+        title:"Microservices",
+        text:"Scalable cloud-native Java architecture."
       },
       {
-        title: "Flexible Resourcing",
-        text:
-          "Scale capacity based on project timelines, workload and changing business priorities."
+        title:"Database Integration",
+        text:"MySQL, PostgreSQL and Oracle connectivity."
       }
     ],
 
-    benefits: [
-      "Faster access to critical skills",
-      "Reduced recruitment lead time",
-      "Flexible delivery capacity",
-      "Improved project continuity"
+    benefits:[
+      "High Performance",
+      "Enterprise Grade Security",
+      "Scalable Architecture",
+      "Cloud Ready Applications"
     ],
 
-    features: [
-      "Rapid onboarding",
-      "Flexible engagement duration",
-      "Specialist technology roles",
-      "Dedicated development teams",
-      "Managed delivery pods",
-      "Project support"
+    features:[
+      "Core Java",
+      "Advanced Java",
+      "Spring Boot",
+      "REST APIs",
+      "Hibernate",
+      "MySQL"
     ]
-  }
+},
+{
+slug:"full-stack-java",
+
+page:"full-stack-java.html",
+
+number:"11",
+
+icon:"fa-solid fa-code",
+
+name:"Full Stack Java",
+
+fullName:"Full Stack Java Development",
+
+image:"assets/services/full-stack-java.jpg",
+
+shortDescription:
+"Modern Java Full Stack web application development using Java, Spring Boot, React and MySQL.",
+
+overview:
+"We build complete enterprise applications using frontend and backend technologies with modern architecture.",
+
+secondaryText:
+"Our Full Stack Java solutions include responsive UI, secure backend APIs, authentication, cloud deployment and DevOps.",
+
+capabilities:[
+{
+title:"Frontend Development",
+text:"HTML CSS JavaScript React"
+},
+{
+title:"Backend APIs",
+text:"Spring Boot REST APIs"
+},
+{
+title:"Database",
+text:"MySQL PostgreSQL"
+},
+{
+title:"Deployment",
+text:"Docker Cloud CI/CD"
+}
+],
+
+benefits:[
+"Complete Web Solutions",
+"Fast Development",
+"Responsive Design",
+"Scalable Architecture"
+],
+
+features:[
+"HTML",
+"CSS",
+"JavaScript",
+"React",
+"Java",
+"Spring Boot"
+]
+},
+{
+slug:"dot-net-development",
+
+page:"dot-net-development.html",
+
+number:"12",
+
+icon:"fa-brands fa-microsoft",
+
+name:".NET Development",
+
+fullName:"Microsoft .NET Development Services",
+
+image:"assets/services/dot-net-development.jpg",
+
+shortDescription:
+"Enterprise software development using ASP.NET Core and Microsoft technologies.",
+
+overview:
+"We develop business applications using C#, ASP.NET Core, SQL Server and Azure Cloud.",
+
+secondaryText:
+"Our team builds secure ERP, CRM and enterprise management systems.",
+
+capabilities:[
+{
+title:"ASP.NET Core",
+text:"Modern web applications."
+},
+{
+title:"REST APIs",
+text:"Secure backend development."
+},
+{
+title:"Azure Deployment",
+text:"Cloud hosting solutions."
+},
+{
+title:"SQL Server",
+text:"Database solutions."
+}
+],
+
+benefits:[
+"Enterprise Security",
+"Fast Performance",
+"Cloud Ready",
+"Microsoft Ecosystem"
+],
+
+features:[
+"C#",
+"ASP.NET",
+"SQL Server",
+"Azure",
+"REST API",
+"MVC"
+]
+},
+{
+slug:"python-development",
+
+page:"python-development.html",
+
+number:"13",
+
+icon:"fa-brands fa-python",
+
+name:"Python Development",
+
+fullName:"Python Software Development",
+
+image:"assets/services/python-development.jpg",
+
+shortDescription:
+"Develop scalable automation, web applications and APIs using Python.",
+
+overview:
+"We deliver Python solutions for web development, automation and enterprise systems.",
+
+secondaryText:
+"Our expertise includes Django, Flask, REST APIs and cloud deployment.",
+
+capabilities:[
+{
+title:"Django",
+text:"Enterprise web applications."
+},
+{
+title:"Flask",
+text:"Lightweight APIs."
+},
+{
+title:"Automation",
+text:"Python scripting."
+},
+{
+title:"Cloud Deployment",
+text:"AWS Azure GCP"
+}
+],
+
+benefits:[
+"Rapid Development",
+"Easy Integration",
+"High Scalability",
+"Automation"
+],
+
+features:[
+"Django",
+"Flask",
+"REST API",
+"Automation",
+"MySQL",
+"Cloud"
+]
+},
+{
+slug:"python-ai",
+
+page:"python-ai.html",
+
+number:"14",
+
+icon:"fa-solid fa-robot",
+
+name:"Advanced AI with Python",
+
+fullName:"Advanced Artificial Intelligence using Python",
+
+image:"assets/services/python-ai.jpg",
+
+shortDescription:
+"Build intelligent AI applications using Python, Machine Learning, Deep Learning and Generative AI.",
+
+overview:
+"We develop AI-powered business solutions using Python and modern AI frameworks.",
+
+secondaryText:
+"Our services include Chatbots, NLP, Computer Vision, Predictive Analytics and Generative AI integration.",
+
+capabilities:[
+{
+title:"Machine Learning",
+text:"Predictive models."
+},
+{
+title:"Deep Learning",
+text:"Neural networks."
+},
+{
+title:"Generative AI",
+text:"LLMs and AI Assistants."
+},
+{
+title:"Computer Vision",
+text:"Image intelligence."
+}
+],
+
+benefits:[
+"Business Automation",
+"AI Decision Making",
+"Higher Productivity",
+"Innovation"
+],
+
+features:[
+"Python",
+"TensorFlow",
+"PyTorch",
+"OpenAI APIs",
+"NLP",
+"Computer Vision"
+]
+},
+{
+  slug: "full-stack-python",
+
+  page: "full-stack-python.html",
+
+  number: "14",
+
+  icon: "fa-solid fa-layer-group",
+
+  name: "Full Stack Python",
+
+  fullName: "Full Stack Python Development Services",
+
+  image: "assets/services/full-stack-python.jpg",
+
+  shortDescription:
+    "Build responsive, secure and scalable full stack web applications using Python, Django, Flask, React and modern databases.",
+
+  overview:
+    "Oriatek provides complete Full Stack Python development services for startups, enterprises and growing businesses. We combine modern frontend technologies with powerful Python backend frameworks to build responsive, secure and maintainable digital applications.",
+
+  secondaryText:
+    "Our Full Stack Python solutions include user-friendly frontend interfaces, Django or Flask backend development, REST API integration, database design, authentication, testing, cloud deployment and ongoing application support.",
+
+  capabilities: [
+    {
+      title: "Frontend Development",
+      text:
+        "Create responsive and interactive user interfaces using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS and React."
+    },
+    {
+      title: "Python Backend Development",
+      text:
+        "Build secure and scalable server-side applications using Python, Django, Flask and FastAPI."
+    },
+    {
+      title: "REST API Development",
+      text:
+        "Develop reliable REST APIs for frontend applications, mobile apps and third-party platform integrations."
+    },
+    {
+      title: "Database Integration",
+      text:
+        "Design and integrate databases using MySQL, PostgreSQL, SQLite and MongoDB."
+    },
+    {
+      title: "Authentication and Security",
+      text:
+        "Implement secure login, JWT authentication, role-based access control and application security practices."
+    },
+    {
+      title: "Cloud Deployment",
+      text:
+        "Deploy and maintain Python applications using AWS, Azure, Render, Railway, Docker and CI/CD workflows."
+    }
+  ],
+
+  benefits: [
+    "Complete frontend and backend development",
+    "Fast and flexible application delivery",
+    "Secure and scalable architecture",
+    "Easy integration with APIs and third-party services",
+    "Responsive multi-device user experience",
+    "Cloud-ready application deployment"
+  ],
+
+  features: [
+    "HTML, CSS and JavaScript",
+    "React and responsive UI development",
+    "Python backend development",
+    "Django, Flask and FastAPI",
+    "REST API development",
+    "MySQL and PostgreSQL",
+    "Authentication and role management",
+    "Git, Docker and cloud deployment"
+  ]
+},
+  // {
+  //   slug: "staff-augmentation",
+  //   page: "staff-augmentation.html",
+  //   name: "Staff Augmentation",
+  //   fullName: "Staff Augmentation",
+  //   number: "09",
+  //   icon: "fa-solid fa-user-group",
+
+  //   shortDescription:
+  //     "Extend delivery capacity with experienced engineers, architects, consultants and specialists who integrate quickly with your teams.",
+
+  //   overview:
+  //     "Oriatek provides flexible access to skilled professionals for short-term projects, strategic programs and long-term product delivery. Our specialists work within your delivery model and collaborate closely with internal teams.",
+
+  //   secondaryText:
+  //     "We support individual specialist placements, dedicated teams and managed delivery pods across software engineering, cloud, cyber security, data, quality and product delivery.",
+
+  //   image:
+  //     "assets/services/staff-augmentation.jpg",
+
+  //   capabilities: [
+  //     {
+  //       title: "Dedicated Specialists",
+  //       text:
+  //         "Add focused expertise in engineering, cloud, data, security, quality and product delivery."
+  //     },
+  //     {
+  //       title: "Team Extension",
+  //       text:
+  //         "Integrate experienced professionals into existing squads while preserving your delivery practices."
+  //     },
+  //     {
+  //       title: "Managed Delivery Pods",
+  //       text:
+  //         "Use cross-functional teams with defined outcomes, governance and delivery responsibility."
+  //     },
+  //     {
+  //       title: "Flexible Resourcing",
+  //       text:
+  //         "Scale capacity based on project timelines, workload and changing business priorities."
+  //     }
+  //   ],
+
+  //   benefits: [
+  //     "Faster access to critical skills",
+  //     "Reduced recruitment lead time",
+  //     "Flexible delivery capacity",
+  //     "Improved project continuity"
+  //   ],
+
+  //   features: [
+  //     "Rapid onboarding",
+  //     "Flexible engagement duration",
+  //     "Specialist technology roles",
+  //     "Dedicated development teams",
+  //     "Managed delivery pods",
+  //     "Project support"
+  //   ]
+  // }
 ];

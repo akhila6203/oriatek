@@ -48,11 +48,41 @@ const serviceLinks = [
     icon: "fa-solid fa-lightbulb",
     href: "it-consulting.html",
   },
-  {
-    name: "Staff Augmentation",
-    icon: "fa-solid fa-user-group",
-    href: "staff-augmentation.html",
+   {
+    name: "Java Development",
+    icon: "fa-brands fa-java",
+    href: "java-development.html",
   },
+  {
+    name: "Full Stack Java",
+    icon: "fa-solid fa-code",
+    href: "full-stack-java.html",
+  },
+  {
+    name: ".NET Development",
+    icon: "fa-brands fa-microsoft",
+    href: "dot-net-development.html",
+  },
+  {
+    name: "Python Development",
+    icon: "fa-brands fa-python",
+    href: "python-development.html",
+  },
+  {
+    name: "Full Stack Python",
+    icon: "fa-solid fa-layer-group",
+    href: "full-stack-python.html",
+  },
+  {
+    name: "Advanced AI with Python",
+    icon: "fa-solid fa-robot",
+    href: "python-ai.html",
+  },
+  // {
+  //   name: "Staff Augmentation",
+  //   icon: "fa-solid fa-user-group",
+  //   href: "staff-augmentation.html",
+  // },
 ];
 
 const desktopServiceLinks = serviceLinks
@@ -416,12 +446,41 @@ const siteFooterTemplate = `
         IT Consulting
       </a>
     </li>
+     <li>
+    <a href="java-development.html">
+      Java Development
+    </a>
+  </li>
 
-    <li>
-      <a href="staff-augmentation.html">
-        Staff Augmentation
-      </a>
-    </li>
+  <li>
+    <a href="full-stack-java.html">
+      Full Stack Java
+    </a>
+  </li>
+
+  <li>
+    <a href="dot-net-development.html">
+      .NET Development
+    </a>
+  </li>
+
+  <li>
+    <a href="python-development.html">
+      Python Development
+    </a>
+  </li>
+
+  <li>
+    <a href="full-stack-python.html">
+      Full Stack Python
+    </a>
+  </li>
+
+  <li>
+    <a href="python-ai.html">
+      Advanced AI with Python
+    </a>
+  </li>
   </ul>
 </div>
 
@@ -614,7 +673,14 @@ function setActiveNavigation() {
     "application-services.html",
     "web-mobile-development.html",
     "it-consulting.html",
-    "staff-augmentation.html",
+    
+     "java-development.html",
+    "full-stack-java.html",
+    "dot-net-development.html",
+    "python-development.html",
+    "full-stack-python.html",
+    "python-ai.html",
+    // "staff-augmentation.html",
   ];
 
   if (servicePageFiles.includes(currentFile)) {

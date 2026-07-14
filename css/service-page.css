@@ -1,4 +1,4 @@
-.service-inner-banner {
+/* .service-inner-banner {
   background:
     var(--service-banner-image)
     center / cover no-repeat;
@@ -10,6 +10,194 @@
   color: #ffffff;
   font-size: clamp(2.4rem, 5vw, 4rem);
   line-height: 1.15;
+} */
+ /* =========================================================
+   SERVICE DETAILS BANNER
+========================================================= */
+
+.service-inner-banner {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 200px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px 0 60px;
+
+  text-align: center;
+  color: #ffffff;
+
+  background:
+    var(--service-banner-image)
+    center / cover no-repeat;
+}
+
+/* Optional soft lighting effect */
+.service-inner-banner::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(24, 114, 152, 0.18),
+      transparent 32%
+    );
+
+  pointer-events: none;
+}
+
+.service-inner-banner .container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, calc(100% - 2rem));
+}
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.service-banner-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 14px;
+  margin-bottom: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #74d7ff;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.service-inner-banner h1 {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 3vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.service-page-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.service-page-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #71d7ff;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.service-page-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.service-page-breadcrumb a:first-child:hover {
+  transform: translateY(-1px);
+}
+
+.service-page-breadcrumb i {
+  color: #71d7ff;
+  font-size: 13px;
+}
+
+.service-page-breadcrumb > span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.service-page-breadcrumb > span:last-child {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .service-inner-banner {
+    min-height: 410px;
+    padding: 65px 0;
+  }
+
+  .service-inner-banner h1 {
+    max-width: 780px;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .service-inner-banner {
+    min-height: 350px;
+    padding: 50px 0;
+  }
+
+  .service-banner-label {
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .service-inner-banner h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.15;
+  }
+
+  .service-page-breadcrumb {
+    gap: 7px;
+    margin-top: 18px;
+    font-size: 12px;
+  }
 }
 
 .service-overview-section,
