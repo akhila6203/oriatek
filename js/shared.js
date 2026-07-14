@@ -48,7 +48,19 @@ const serviceLinks = [
     icon: "fa-solid fa-lightbulb",
     href: "it-consulting.html",
   },
-   {
+  // {
+  //   name: "Staff Augmentation",
+  //   icon: "fa-solid fa-user-group",
+  //   href: "staff-augmentation.html",
+  // },
+];
+
+  /* =========================================================
+   TRAININGS DROPDOWN DATA
+========================================================= */
+
+const trainingLinks = [
+  {
     name: "Java Development",
     icon: "fa-brands fa-java",
     href: "java-development.html",
@@ -74,16 +86,58 @@ const serviceLinks = [
     href: "full-stack-python.html",
   },
   {
-    name: "Advanced AI with Python",
+    name: "Python with Advanced AI",
     icon: "fa-solid fa-robot",
     href: "python-ai.html",
   },
-  // {
-  //   name: "Staff Augmentation",
-  //   icon: "fa-solid fa-user-group",
-  //   href: "staff-augmentation.html",
-  // },
 ];
+
+const desktopTrainingLinks = trainingLinks
+  .map(
+    (training) => `
+      <a
+        class="service-dropdown-link"
+        href="${training.href}"
+      >
+        <span class="service-dropdown-icon">
+          <i
+            class="${training.icon}"
+            aria-hidden="true"
+          ></i>
+        </span>
+
+        <span class="service-dropdown-content">
+          <strong>${training.name}</strong>
+          <small>View training details</small>
+        </span>
+
+        <i
+          class="fa-solid fa-arrow-right service-dropdown-arrow"
+          aria-hidden="true"
+        ></i>
+      </a>
+    `
+  )
+  .join("");
+
+const mobileTrainingLinks = trainingLinks
+  .map(
+    (training) => `
+      <a
+        href="${training.href}"
+        class="mobile-service-link"
+      >
+        <i
+          class="${training.icon}"
+          aria-hidden="true"
+        ></i>
+
+        <span>${training.name}</span>
+      </a>
+    `
+  )
+  .join("");
+
 
 const desktopServiceLinks = serviceLinks
   .map(
@@ -160,7 +214,55 @@ const siteHeaderTemplate = `
             </div>
           </div>
         </div>
+        <div class="services-dropdown training-dropdown">
+  <a
+    class="desktop-nav-link trainings-main-link"
+    href="trainings.html"
+    aria-haspopup="true"
+  >
+    Trainings
 
+    <i
+      class="fa-solid fa-chevron-down dropdown-chevron"
+      aria-hidden="true"
+    ></i>
+  </a>
+
+  <div
+    class="services-mega-menu trainings-mega-menu"
+    aria-label="Trainings submenu"
+  >
+    <div class="mega-menu-header">
+
+      <div>
+        <span class="mega-menu-label">
+          OUR TRAININGS
+        </span>
+
+        <h3>
+           Career-Focused Tech Training
+        </h3>
+      </div>
+
+      <a
+        href="trainings.html"
+        class="view-all-services"
+      >
+        View All Trainings
+
+        <i
+          class="fa-solid fa-arrow-right"
+          aria-hidden="true"
+        ></i>
+      </a>
+
+    </div>
+
+    <div class="services-dropdown-grid">
+      ${desktopTrainingLinks}
+    </div>
+  </div>
+</div>
         <a class="desktop-nav-link" href="contact.html">Contact Us</a>
       </nav>
 
@@ -260,6 +362,37 @@ const siteHeaderTemplate = `
           </div>
         </div>
 
+        <div class="mobile-services-wrapper">
+
+  <div class="mobile-services-row">
+
+    <a
+      class="mobile-nav-link mobile-trainings-main"
+      href="trainings.html"
+    >
+      <span>Trainings</span>
+    </a>
+
+    <button
+      class="mobile-services-toggle"
+      id="mobileTrainingsToggle"
+      type="button"
+      aria-expanded="false"
+      aria-label="Open trainings menu"
+    >
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+  </div>
+
+  <div
+    class="mobile-services-list"
+    id="mobileTrainingsList"
+  >
+    ${mobileTrainingLinks}
+  </div>
+
+</div>
         <a class="mobile-nav-link" href="contact.html">
           <span>Contact Us</span>
           <i class="fa-solid fa-arrow-right"></i>
@@ -388,7 +521,11 @@ const siteFooterTemplate = `
     <li>
       <a href="services.html">Services</a>
     </li>
-
+    <li>
+      <a href="trainings.html">
+        Trainings
+      </a>
+    </li>
     <li>
       <a href="contact.html">Contact Us</a>
     </li>
@@ -446,41 +583,6 @@ const siteFooterTemplate = `
         IT Consulting
       </a>
     </li>
-     <li>
-    <a href="java-development.html">
-      Java Development
-    </a>
-  </li>
-
-  <li>
-    <a href="full-stack-java.html">
-      Full Stack Java
-    </a>
-  </li>
-
-  <li>
-    <a href="dot-net-development.html">
-      .NET Development
-    </a>
-  </li>
-
-  <li>
-    <a href="python-development.html">
-      Python Development
-    </a>
-  </li>
-
-  <li>
-    <a href="full-stack-python.html">
-      Full Stack Python
-    </a>
-  </li>
-
-  <li>
-    <a href="python-ai.html">
-      Advanced AI with Python
-    </a>
-  </li>
   </ul>
 </div>
 
@@ -587,6 +689,15 @@ const mobileServicesList = document.getElementById(
   "mobileServicesList"
 );
 
+const mobileTrainingsToggle =
+  document.getElementById(
+    "mobileTrainingsToggle"
+  );
+
+const mobileTrainingsList =
+  document.getElementById(
+    "mobileTrainingsList"
+  );
 /* =========================================================
    DARK / LIGHT THEME
 ========================================================= */
@@ -673,15 +784,19 @@ function setActiveNavigation() {
     "application-services.html",
     "web-mobile-development.html",
     "it-consulting.html",
-    
-     "java-development.html",
-    "full-stack-java.html",
-    "dot-net-development.html",
-    "python-development.html",
-    "full-stack-python.html",
-    "python-ai.html",
+  
     // "staff-augmentation.html",
   ];
+
+  const trainingPageFiles = [
+  "trainings.html",
+  "java-development.html",
+  "full-stack-java.html",
+  "dot-net-development.html",
+  "python-development.html",
+  "full-stack-python.html",
+  "python-ai.html",
+];
 
   if (servicePageFiles.includes(currentFile)) {
     document
@@ -692,6 +807,16 @@ function setActiveNavigation() {
       .querySelector(".mobile-services-main")
       ?.classList.add("active");
   }
+
+  if (trainingPageFiles.includes(currentFile)) {
+  document
+    .querySelector(".trainings-main-link")
+    ?.classList.add("active");
+
+  document
+    .querySelector(".mobile-trainings-main")
+    ?.classList.add("active");
+}
 }
 
 /* =========================================================
@@ -785,6 +910,25 @@ mobileServicesToggle?.addEventListener("click", () => {
 });
 
 /* =========================================================
+   MOBILE TRAININGS ACCORDION
+========================================================= */
+
+mobileTrainingsToggle?.addEventListener("click", () => {
+  const isOpen =
+    mobileTrainingsList?.classList.toggle("open");
+
+  mobileTrainingsToggle.classList.toggle(
+    "active",
+    Boolean(isOpen)
+  );
+
+  mobileTrainingsToggle.setAttribute(
+    "aria-expanded",
+    String(Boolean(isOpen))
+  );
+});
+
+/* =========================================================
    CLOSE MOBILE MENU WHEN SCREEN BECOMES DESKTOP
 ========================================================= */
 
@@ -868,6 +1012,7 @@ if (currentYearElement) {
   currentYearElement.textContent =
     new Date().getFullYear();
 }
+
 
 
 
